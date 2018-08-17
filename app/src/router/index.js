@@ -6,6 +6,7 @@ import Meet from '@/components/Meet'
 import MeetView from '@/components/MeetView'
 import MeetSignUp from '@/components/MeetSignUp'
 import MeetSignUpSucces from '@/components/MeetSignUpSucces'
+import MeetSignUpError from '@/components/MeetSignUpError'
 import MeetSign from '@/components/MeetSign'
 import MeetSignSucces from '@/components/MeetSignSucces'
 import TrainSign from '@/components/TrainSign'
@@ -35,6 +36,10 @@ export default new Router({
       path: '/meetSignUpSucces',
       name: 'MeetSignUpSucces',
       component: MeetSignUpSucces
+    },{
+      path: '/meetSignUpError',
+      name: 'MeetSignUpError',
+      component: MeetSignUpError
     },{
       path: '/meetSign',
       name: 'MeetSign',
