@@ -10,7 +10,8 @@ let base ="http://www.118-china.com";
 //let base = 'http://192.168.100.105:9011/api/';
 export const getMeet = params => { return Axios.post(`${base}/weixin/getMeet.wei`,qs.stringify(params)).then(res => res.data); }; 
 export const signMeet = params => { return Axios.post(`${base}/weixin/signMeet.wei`,qs.stringify(params)).then(res => res.data); }; 
-export const getSignMeet = params => { return Axios.post(`${base}/weixin/getSignMeet.wei`,qs.stringify(params)).then(res => res.data); }; 
+export const getSignMeet = params => { return Axios.post(`${base}/weixin/getSignMeet.wei`,qs.stringify(params)).then(res => res.data); };
+export const saveMeetSignup = params => { return Axios.post(`${base}/weixin/saveSignup.wei`,qs.stringify(params)).then(res => res.data); };  
 
 
 export const getTrainPlan = params => { return Axios.post(`${base}/weixin/getTrainPlan.wei`,qs.stringify(params)).then(res => res.data); }; 

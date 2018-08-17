@@ -17,7 +17,7 @@
 
 <script>
   import Axios from 'axios';
-  import {getMeet,signMeet} from '../api/api.js';
+  import {getMeet,signMeet,saveMeetSignup} from '../api/api.js';
   
   export default {
     data() {
@@ -32,8 +32,15 @@
    
     methods: {
      onSubmit() {
-       this.$router.push({ path:'/meetSignUpSucces'});
-        
+       let para = Object.assign({'meetId':this.meetId}, this.addForm);
+       saveMeetSignup(para).then((res)=>{
+         if(res.state==1){
+           this.$router.push({ path:'/meetSignUpSucces'});
+         }else{
+           this.$router.push({ path:'/meetSignUpError'});
+         }
+       });
+      
      },
      onTelphone(){
       this.error="";
